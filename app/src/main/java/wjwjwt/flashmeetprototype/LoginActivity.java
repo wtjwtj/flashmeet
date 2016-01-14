@@ -13,9 +13,8 @@ import android.widget.TextView;
 import com.parse.LogInCallback;
 import com.parse.Parse;
 import com.parse.ParseException;
-import com.parse.ParseObject;
 import com.parse.ParseUser;
-import com.parse.SignUpCallback;
+
 
 public class LoginActivity extends Activity {
     protected TextView mSignUpTextView;
@@ -32,7 +31,7 @@ public class LoginActivity extends Activity {
         // Enable Local Datastore.
         Parse.enableLocalDatastore(this);
 
-        Parse.initialize(this, "3e7kOFV3rZFAuNO7IDcga43n1n0AuorWjC27Y6na", "V01ZGOlXtqkUdahJOzRoXQUhtqGtnjxmfkkPFudl");
+        Parse.initialize(this);
 
 
 
@@ -78,7 +77,7 @@ public class LoginActivity extends Activity {
                         public void done(ParseUser user, ParseException e) {
                             if(e==null)
                             {
-                                Intent intent = new Intent(LoginActivity.this, LoginActivity.class);
+                                Intent intent = new Intent(LoginActivity.this, MapsActivity.class);
                                 intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
                                 intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TASK);
                                 startActivity(intent);  //successful

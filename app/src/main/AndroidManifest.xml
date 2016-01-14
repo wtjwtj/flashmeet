@@ -21,6 +21,11 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme" >
         <activity android:name=".LoginActivity" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
 
         </activity>
         <activity android:name=".SignUpActivity" >
@@ -37,14 +42,17 @@
             android:name="com.google.android.geo.API_KEY"
             android:value="@string/google_maps_key" />
 
+        <meta-data
+            android:name="com.parse.APPLICATION_ID"
+            android:value="XtBkZOsiwzDSqFR63oKWk73ibVSGiCInU7Wzcz7s" />
+        <meta-data
+            android:name="com.parse.CLIENT_KEY"
+            android:value="cOfMMfTTYkkaaH7HOLRQTqvHHCW4hzroSB3PAsjp" />
+
         <activity
             android:name=".MapsActivity"
             android:label="@string/title_activity_maps" >
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
 
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
         </activity>
     </application>
 

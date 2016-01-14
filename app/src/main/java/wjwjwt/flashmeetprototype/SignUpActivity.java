@@ -40,6 +40,9 @@ public class SignUpActivity extends AppCompatActivity {
                 password = password.trim();
                 email = email.trim();   //trim removes spaces and stores new value back in variable
 
+                ParseUser currentUser = ParseUser.getCurrentUser();
+                currentUser.logOut();
+
                 if(username.isEmpty() || password.isEmpty() || email.isEmpty())
                 {
                     AlertDialog.Builder builder = new AlertDialog.Builder(SignUpActivity.this);
@@ -65,6 +68,7 @@ public class SignUpActivity extends AppCompatActivity {
                                 Intent intent = new Intent(SignUpActivity.this, LoginActivity.class);
                                 intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
                                 intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TASK);
+
                                 startActivity(intent);
                             }
                             else {
