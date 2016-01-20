@@ -65,10 +65,11 @@ public class SignUpActivity extends AppCompatActivity {
                         public void done(ParseException e) {
                             if (e==null){
                                 //successful registration takes to login screen
-                                Intent intent = new Intent(SignUpActivity.this, LoginActivity.class);
-                                intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
-                                intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TASK);
 
+                                Intent intent = new Intent(SignUpActivity.this, LoginActivity.class);
+
+                               intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
+                                intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TASK);
                                 startActivity(intent);
                             }
                             else {

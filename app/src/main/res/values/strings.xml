@@ -5,8 +5,8 @@
     <string name="password_hint">Password</string>
     <string name="username_hint">Username</string>
     <string name="login_button">Login</string>
-    <string name= "email_hint">E-Mail Adresse</string>
-    <string name ="errormessage"> enter correct values</string>
-    <string name= "errortitle"> error</string>
+    <string name="email_hint">E-Mail Adresse</string>
+    <string name="errormessage"> enter correct values</string>
+    <string name="errortitle">DJASHDIHASUDHIAS</string>
     <string name="title_activity_maps">Map</string>
 </resources>

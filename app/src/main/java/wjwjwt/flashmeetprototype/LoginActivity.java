@@ -28,10 +28,6 @@ public class LoginActivity extends Activity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_login);
 
-        // Enable Local Datastore.
-        Parse.enableLocalDatastore(this);
-
-        Parse.initialize(this);
 
 
 
